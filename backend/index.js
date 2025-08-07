@@ -16,7 +16,13 @@ const dbName = 'myPasswordManager';
 const app = express();
 const port = 3000;
 app.use(bodyparser.json());
-app.use(cors());
+
+// app.use(cors());
+
+app.use(cors({
+  origin: 'https://passwordmanager-q7u5f7uxx-sayan-kumar-dass-projects.vercel.app'
+}));
+
 
 client.connect();
 
