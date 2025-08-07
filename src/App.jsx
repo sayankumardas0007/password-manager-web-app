@@ -20,11 +20,13 @@ function App() {
 
   const [showMyPassword, setShowMyPassword] = useState(false);
 
+  const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 
   const getPasswords = async () => {
     try {
-      let req = await fetch("http://localhost:3000/");
+      // let req = await fetch("http://localhost:3000/");
+      let req = await fetch(`${BASE_URL}/`);
       let passwords = await req.json();
       setwebNames(passwords);
     } catch (e) {
@@ -41,9 +43,11 @@ function App() {
   const saveToLS = async (arr, obj, id = '') => {
     try {
       if (id.length === 0) {
-        let res = await fetch("http://localhost:3000/", { method: "POST", headers: { "content-Type": "application/json" }, body: JSON.stringify(obj) });
+        // let res = await fetch("http://localhost:3000/", { method: "POST", headers: { "content-Type": "application/json" }, body: JSON.stringify(obj) });
+        let res = await fetch(`${BASE_URL}/`, { method: "POST", headers: { "content-Type": "application/json" }, body: JSON.stringify(obj) });
       } else {
-        let res = await fetch("http://localhost:3000/", { method: "DELETE", headers: { "content-Type": "application/json" }, body: JSON.stringify({id: id}) });
+        // let res = await fetch("http://localhost:3000/", { method: "DELETE", headers: { "content-Type": "application/json" }, body: JSON.stringify({id: id}) });
+        let res = await fetch(`${BASE_URL}/`, { method: "DELETE", headers: { "content-Type": "application/json" }, body: JSON.stringify({id: id}) });
       }
     } catch (e) {
       console.log(e);
