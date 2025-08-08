@@ -32,16 +32,14 @@ A secure and user-friendly Password Manager web application where users can stor
 
 ## 📂 Folder Structure
 
+```plaintext
 root/
-├── backend/ # Node.js + Express + MongoDB backend.
-|
-├── public/ # Static assets.
-|
-├── src/ # React frontend source code.
-|
-├── package.json # Frontend dependencies.
-|
-└── README.md # Project documentation.
+├── backend/       # Node.js + Express + MongoDB backend.
+├── public/        # Static assets.
+├── src/           # React frontend source code.
+├── package.json   # Frontend dependencies.
+└── README.md      # Project documentation.
+```
 
 
 
