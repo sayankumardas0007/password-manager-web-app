@@ -33,11 +33,15 @@ A secure and user-friendly Password Manager web application where users can stor
 ## 📂 Folder Structure
 
 root/
-├── backend/ # Node.js + Express + MongoDB backend
-├── public/ # Static assets
-├── src/ # React frontend source code
-├── package.json # Frontend dependencies
-└── README.md # Project documentation
+├── backend/ # Node.js + Express + MongoDB backend.
+|
+├── public/ # Static assets.
+|
+├── src/ # React frontend source code.
+|
+├── package.json # Frontend dependencies.
+|
+└── README.md # Project documentation.
 
 
 
@@ -79,8 +83,3 @@ node index.js
 Sayan Kumar Das
 
 GitHub: [@sayankumardas0007](https://github.com/sayankumardas0007)
-
-
-
-
-## 📂 Folder Structure
